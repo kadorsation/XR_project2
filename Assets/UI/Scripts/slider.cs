@@ -7,20 +7,21 @@ public class slider : MonoBehaviour
 {
     public Image slider_full;
     public float Max = 30;
-    static public float now = 0;
+    static public float now;
     public Text slider_number;
     // Start is called before the first frame update
     void Start()
     {
         slider_number.text = "0 / Max";
+        now = Max;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(now > Max)
+        if(now < 0)
         {
-            now = Max;
+            now = 0;
             return;
         }
         slider_full.fillAmount = now / Max;

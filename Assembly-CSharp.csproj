@@ -58,13 +58,13 @@
      <Compile Include="Assets\Character\exo_control.cs" />
      <Compile Include="Assets\Dragons\DragonControl.cs" />
      <Compile Include="Assets\Pack\Scripts\CameraController.cs" />
-     <Compile Include="Assets\UI\Scripts\add_1.cs" />
+     <Compile Include="Assets\UI\Scripts\hurt.cs" />
      <Compile Include="Assets\UI\Scripts\open_menu.cs" />
      <Compile Include="Assets\UI\Scripts\slider.cs" />
      <Compile Include="Assets\UI\Scripts\start.cs" />
      <Compile Include="Assets\monsters\monster4_SphereRobot\Assets\Scripts\RobotFreeAnim.cs" />
      <Compile Include="Assets\monsters\monster_attack.cs" />
-     <None Include="Assets\Sets - Gems\Shaders\Gem.shader" />
+     <None Include="Assets\Dragons\Sets - Gems\Shaders\Gem.shader" />
      <None Include="Assets\Pack\SpaceFighter\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Pack\Fire\Procedural fire\Shaders\FireSphere.shader" />
      <None Include="Assets\Pack\Fire\Procedural fire\Demo scene\Readme.txt" />
@@ -250,6 +250,9 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -622,6 +625,24 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst">
+ <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Editor">
+ <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Animation.Rigging">
+ <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Animation.Rigging.Editor">
+ <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>C:/Users/Charles/Downloads/XR_project2/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
