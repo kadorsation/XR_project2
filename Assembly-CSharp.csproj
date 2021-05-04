@@ -58,9 +58,13 @@
      <Compile Include="Assets\Character\exo_control.cs" />
      <Compile Include="Assets\Dragons\DragonControl.cs" />
      <Compile Include="Assets\Pack\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\ReverseNormals.cs" />
+     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
+     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\rotation.cs" />
      <Compile Include="Assets\Scripts\CloneObj.cs" />
      <Compile Include="Assets\UI\Scripts\hurt.cs" />
      <Compile Include="Assets\UI\Scripts\open_menu.cs" />
+     <Compile Include="Assets\UI\Scripts\skill_cd.cs" />
      <Compile Include="Assets\UI\Scripts\slider.cs" />
      <Compile Include="Assets\UI\Scripts\start.cs" />
      <Compile Include="Assets\VRTK\Examples\ExampleResources\SceneResources\[001 - Interactions] ControllerEvents\Scripts\VRTKExample_ControllerEventsDelegateListeners.cs" />
@@ -407,7 +411,9 @@
      <Compile Include="Assets\VRTK\Source\Scripts\Utilities\VRTK_VelocityEstimator.cs" />
      <Compile Include="Assets\monsters\monster4_SphereRobot\Assets\Scripts\RobotFreeAnim.cs" />
      <Compile Include="Assets\monsters\monster_attack.cs" />
+     <None Include="Assets\Particle Ribbon by Moonflower Carnivore\readme_Simple_Particle_Ribbon.txt" />
      <None Include="Assets\Dragons\Sets - Gems\Shaders\Gem.shader" />
+     <None Include="Assets\Particle Ribbon by Moonflower Carnivore\Shaders\Particle Alpha Blend HDR.shader" />
      <None Include="Assets\Pack\SpaceFighter\GlassStainedBumpDistort.shader" />
      <None Include="Assets\VRTK\Documentation.txt" />
      <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\AdaptiveQualityDebugVisualization.shader" />
@@ -415,9 +421,9 @@
      <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\VRTK_OutlineBasic.shader" />
      <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\Unlit_TransparentColor.shader" />
      <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\UIOverlay.shader" />
-     <None Include="Assets\Pack\Fire\Procedural fire\Shaders\FireSphere.shader" />
+     <None Include="Assets\Dragons\Fire\Procedural fire\Shaders\FireSphere.shader" />
      <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\TransparentFresnelBehind.shader" />
-     <None Include="Assets\Pack\Fire\Procedural fire\Demo scene\Readme.txt" />
+     <None Include="Assets\Dragons\Fire\Procedural fire\Demo scene\Readme.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
