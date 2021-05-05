@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Animation\absorb.cs" />
      <Compile Include="Assets\Character\exo_control.cs" />
      <Compile Include="Assets\Dragons\DragonControl.cs" />
      <Compile Include="Assets\Pack\Scripts\CameraController.cs" />
