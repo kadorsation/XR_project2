@@ -58,6 +58,7 @@
      <Compile Include="Assets\Animation\absorb.cs" />
      <Compile Include="Assets\Character\exo_control.cs" />
      <Compile Include="Assets\Dragons\DragonControl.cs" />
+     <Compile Include="Assets\Dragons\DragonRotate.cs" />
      <Compile Include="Assets\Pack\Scripts\CameraController.cs" />
      <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\ReverseNormals.cs" />
      <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
