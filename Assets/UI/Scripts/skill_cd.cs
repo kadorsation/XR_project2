@@ -14,6 +14,8 @@ public class skill_cd : MonoBehaviour
     //call into_cd function when dragon use skill
     public void into_cd()
     {
+        Debug.Log("use skill!");
+        GetComponent<Button>().interactable = false;
         //unable skill
         time_temp = time_set;
         cover.SetActive(true);
@@ -29,6 +31,7 @@ public class skill_cd : MonoBehaviour
             time_UI.text = "";
             CancelInvoke("timer");
             cover.SetActive(false);
+            GetComponent<Button>().interactable = true;
             //enable skill
         }
     }
