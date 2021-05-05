@@ -6,7 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
+public class PlayerController : MonoBehaviourPunCallbacks//, IDamageable
 {
 	
     public float m_Gravity = 30.0f;
@@ -272,16 +272,19 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
 	}
     */
+    /*
 	public void TakeDamage(float damage)
 	{
 		Debug.Log("I do");
+        
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             //Die();
         }
-        //PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+        
+        PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
 	}
 
 	[PunRPC]
@@ -295,7 +298,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 		currentHealth -= damage;
 		if(currentHealth <= 0)
 		{
-			//Die();
+			Die();
            
         }
 	}
@@ -304,4 +307,5 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 	{
 		playerManager.Die();
 	}
+*/
 }

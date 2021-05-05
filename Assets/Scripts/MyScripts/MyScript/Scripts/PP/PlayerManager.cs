@@ -32,8 +32,17 @@ public class PlayerManager : MonoBehaviour
     {
     	Debug.Log("Instantiated Player Controller");
         
-    	controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "MyRobot"), 
-            new Vector3(0f,5f,0f), Quaternion.identity, 0, new object[] { PV.ViewID });
+        if(PhotonNetwork.IsMasterClient)
+        {
+            controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player1"),
+                new Vector3(0f, 5f, 0f), Quaternion.identity, 0, new object[] { PV.ViewID });
+        }
+        else
+        {
+            controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "MyDragon"),
+                new Vector3(0f, 5f, 0f), Quaternion.identity, 0, new object[] { PV.ViewID });
+        }
+    	
     }
 
     public void Die()
