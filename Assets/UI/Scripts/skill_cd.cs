@@ -12,22 +12,26 @@ public class skill_cd : MonoBehaviour
     public int skill_id;
     public GameObject projectile;
     public float projectileSpeed;
-    public GameObject dragon;
-    public GameObject mouthEnd;
-    public GameObject wingEnd1;
-    public GameObject wingEnd2;
+    GameObject dragon;
+    GameObject mouthEnd;
+    GameObject wingEnd1;
+    GameObject wingEnd2;
     private GameObject player;
 
     private Animator animator;
     private WaitForSeconds shortduration = new WaitForSeconds(1);
     void Start()
     {
-        animator = dragon.GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
     }
     //call into_cd function when dragon use skill
     public void into_cd()
     {
+        dragon = GameObject.Find("MyDragon");
+        animator = dragon.GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        wingEnd1 = GameObject.Find("wingEnd1");
+        wingEnd2 = GameObject.Find("wingEnd2");
+        mouthEnd = GameObject.Find("MouthEnd");
         switch (skill_id)
         {
             case 1:

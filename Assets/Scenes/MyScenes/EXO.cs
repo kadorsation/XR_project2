@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
-using Photon.Pun;
-using Photon.Realtime;
+using UnityEngine.UI;
+//using Photon.Pun;
+//using Photon.Realtime;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class EXO : MonoBehaviour, IDamageable
@@ -26,17 +27,18 @@ public class EXO : MonoBehaviour, IDamageable
     //=============================//
     Rigidbody rb;
 
-    PhotonView PV;
+    //PhotonView PV;
 
     // Health
     const float maxHealth = 100f;
     float currentHealth = maxHealth;
     PlayerManager playerManager;
-
+    public Image slider_full;
+    public Text slider_number;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        PV = GetComponent<PhotonView>();
+        //PV = GetComponent<PhotonView>();
         //playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
         DontDestroyOnLoad(gameObject);
     }
@@ -44,26 +46,27 @@ public class EXO : MonoBehaviour, IDamageable
     void Start()
     {
         
-        if (PV.IsMine)
-        {
+        //if (PV.IsMine)
+        //{
             //m_CameraRig = SteamVR_Render.Top().origin;
             animator = GetComponent<Animator>();
             EquipItem(0);
-        }
-        else
-        {
-            //Destroy(GetComponentInChildren<Camera>().gameObject);
-            //Destroy(rb);
-        }
-        
-       // animator = GetComponent<Animator>();
-       // EquipItem(0);
+        //}
+        //else
+        //{
+        //Destroy(GetComponentInChildren<Camera>().gameObject);
+        //Destroy(rb);
+        //}
+
+        // animator = GetComponent<Animator>();
+        // EquipItem(0);
+        slider_number.text = maxHealth.ToString() + "/" + maxHealth.ToString();
     }
 
     void Update()
     {
-        if (!PV.IsMine)
-            return;
+        //if (!PV.IsMine)
+        //    return;
            
         if (isFire.GetStateDown(SteamVR_Input_Sources.RightHand))
         {
@@ -112,17 +115,19 @@ public class EXO : MonoBehaviour, IDamageable
     public void TakeDamage(float damage)
     {
         Debug.Log("I do");
-        /*
+        
         currentHealth -= damage;
+        slider_full.fillAmount = currentHealth / maxHealth;
+        slider_number.text = currentHealth.ToString() + "/" + maxHealth.ToString();
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
             //Die();
         }
-        */
-        PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+        
+        //PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
     }
-    
+    /*
     [PunRPC]
     void RPC_TakeDamage(float damage)
     {
@@ -139,6 +144,7 @@ public class EXO : MonoBehaviour, IDamageable
 
         }
     }
+    */
     /*
     void Die()
     {

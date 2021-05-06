@@ -9,25 +9,27 @@ public class VRAnimatorController : MonoBehaviour
 	public float smoothing = 1;
 	private Animator animator;
 	private Vector3 previousPos;
-	private VRRig vrRig;
+    public Transform headTarget;
+
+    private VRRig vrRig;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         vrRig = GetComponent<VRRig>();
-        previousPos = vrRig.head.vrTarget.position;
+        previousPos = headTarget.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Compute the speed
-    	Vector3 headsetSpeed = (vrRig.head.vrTarget.position - previousPos) / Time.deltaTime;
+    	Vector3 headsetSpeed = (headTarget.position - previousPos) / Time.deltaTime;
     	headsetSpeed.y = 0;
     	// Local Speed
     	Vector3 headsetLocalSpeed = transform.InverseTransformDirection(headsetSpeed);
-    	previousPos = vrRig.head.vrTarget.position;
+    	previousPos = headTarget.position;
 
     	// Set Animator Values
     	float previousDirectionX = animator.GetFloat("DirectionX");

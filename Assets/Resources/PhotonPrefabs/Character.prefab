@@ -4346,6 +4346,7 @@ GameObject:
   - component: {fileID: 386728237591671848}
   - component: {fileID: 386728237591671851}
   - component: {fileID: 6745707432380074561}
+  - component: {fileID: 2048101662255822350}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -4668,13 +4669,6 @@ MonoBehaviour:
     actionPath: /actions/default/in/TouchpadPosition
     needsReinit: 0
   cameraHolder: {fileID: 386728236279227803}
-  mouseSensitivity: 3
-  sprintSpeed: 6
-  walkSpeed: 3
-  jumpForce: 50
-  smoothTime: 0.2
-  items:
-  - {fileID: 5398848522245848661}
 --- !u!143 &386728237591671850
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4745,6 +4739,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.08749822, z: 1}
   m_Center: {x: 0, y: -0.1, z: 0}
+--- !u!114 &2048101662255822350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386728237591671871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1 &386728237598961566
 GameObject:
   m_ObjectHideFlags: 0

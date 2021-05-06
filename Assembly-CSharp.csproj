@@ -70,6 +70,8 @@
     <Compile Include="Assets\Dragons\DragonRotate.cs" />
     <Compile Include="Assets\Dragons\IDamageable.cs" />
     <Compile Include="Assets\Dragons\Projectile.cs" />
+    <Compile Include="Assets\Dragons\fly.cs" />
+    <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\Pack\Scripts\CameraController.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\ReverseNormals.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
@@ -122,6 +124,13 @@
     <Compile Include="Assets\Scripts\MyScripts\MyScript\Scripts\salmon\VRInputModule.cs" />
     <Compile Include="Assets\Scripts\MyScripts\MyScript\Scripts\salmon\door_state.cs" />
     <Compile Include="Assets\Scripts\MyScripts\MyScript\Scripts\salmon\test_state.cs" />
+    <Compile Include="Assets\Scripts\explode.cs" />
+    <Compile Include="Assets\Shared\Ramps\Runtime\RampAsset.cs" />
+    <Compile Include="Assets\Shared\Scripts\AdjustTimeScale.cs" />
+    <Compile Include="Assets\Shared\Scripts\ProximityActivate.cs" />
+    <Compile Include="Assets\Shared\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Shared\Scripts\SimpleCharacterMotor.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\UI\Scripts\hurt.cs" />
     <Compile Include="Assets\UI\Scripts\open_menu.cs" />
     <Compile Include="Assets\UI\Scripts\skill_cd.cs" />
@@ -471,27 +480,51 @@
     <Compile Include="Assets\VRTK\Source\Scripts\Utilities\VRTK_SharedMethods.cs" />
     <Compile Include="Assets\VRTK\Source\Scripts\Utilities\VRTK_Simulator.cs" />
     <Compile Include="Assets\VRTK\Source\Scripts\Utilities\VRTK_VelocityEstimator.cs" />
+    <Compile Include="Assets\checkpoint\show.cs" />
     <Compile Include="Assets\monsters\monster4_SphereRobot\Assets\Scripts\RobotFreeAnim.cs" />
     <Compile Include="Assets\monsters\monster_attack.cs" />
+    <Compile Include="Assets\music\background_music.cs" />
+    <Compile Include="Assets\timer.cs" />
+    <Compile Include="Assets\video\player.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
     <None Include="Assets\Particle Ribbon by Moonflower Carnivore\readme_Simple_Particle_Ribbon.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\EffectExamples\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
     <None Include="Assets\Dragons\Sets - Gems\Shaders\Gem.shader" />
     <None Include="Assets\Particle Ribbon by Moonflower Carnivore\Shaders\Particle Alpha Blend HDR.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Pack\SpaceFighter\GlassStainedBumpDistort.shader" />
+    <None Include="Assets\EffectExamples\Magic Effects\Shaders\Ice.shader" />
+    <None Include="Assets\EffectExamples\Misc Effects\Shaders\Respawn.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\VRTK\Documentation.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\AdaptiveQualityDebugVisualization.shader" />
     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\VRTK_TunnelEffect.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\VRTK_OutlineBasic.shader" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\Unlit_TransparentColor.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\EffectExamples\Misc Effects\Shaders\FireFly.shader" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\UIOverlay.shader" />
     <None Include="Assets\Dragons\Fire\Procedural fire\Shaders\FireSphere.shader" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\TransparentFresnelBehind.shader" />
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Dragons\Fire\Procedural fire\Demo scene\Readme.txt" />
+    <None Include="Assets\EffectExamples\Misc Effects\Shaders\Dissolve.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -676,16 +709,16 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -1033,76 +1066,76 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Animation.Rigging">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Animation.Rigging.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/nctucs/Desktop/XR_project2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/XR_project2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

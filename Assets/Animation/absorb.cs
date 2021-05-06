@@ -8,6 +8,7 @@ public class absorb : MonoBehaviour
     public GameObject ani;
     public GameObject dragon;
     private Animator ani_animator, dragon_animator;
+    public GameObject player_camera, UI_camera, des_camera, anime_camera, dragon_UI;
     int time_set = 26;
     void Start()
     {
@@ -15,6 +16,11 @@ public class absorb : MonoBehaviour
     }
     public void paly_anime()
     {
+        player_camera.SetActive(false);
+        UI_camera.SetActive(false);
+        des_camera.SetActive(false);
+        anime_camera.SetActive(true);
+        dragon_UI.SetActive(false);
         ani_animator = ani.GetComponent<Animator>();
         dragon_animator = dragon.GetComponent<Animator>();
         Debug.Log("eat");
