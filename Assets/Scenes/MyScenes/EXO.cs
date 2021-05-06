@@ -6,7 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class EXO : MonoBehaviourPunCallbacks, IDamageable
+public class EXO : MonoBehaviour, IDamageable
 {
     public SteamVR_Action_Boolean isFire = null;
     public SteamVR_Action_Boolean m_MovePress = null;
@@ -43,6 +43,7 @@ public class EXO : MonoBehaviourPunCallbacks, IDamageable
 
     void Start()
     {
+        
         if (PV.IsMine)
         {
             //m_CameraRig = SteamVR_Render.Top().origin;
@@ -51,9 +52,12 @@ public class EXO : MonoBehaviourPunCallbacks, IDamageable
         }
         else
         {
-            Destroy(GetComponentInChildren<Camera>().gameObject);
-            Destroy(rb);
+            //Destroy(GetComponentInChildren<Camera>().gameObject);
+            //Destroy(rb);
         }
+        
+       // animator = GetComponent<Animator>();
+       // EquipItem(0);
     }
 
     void Update()
@@ -82,15 +86,16 @@ public class EXO : MonoBehaviourPunCallbacks, IDamageable
         }
 
         previousItemIndex = itemIndex;
-
+        /*
         if (PV.IsMine)
         {
             Hashtable hash = new Hashtable();
             hash.Add("itemIndex", itemIndex);
             PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
         }
+        */
     }
-
+    /*
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
     {
         if (!PV.IsMine && targetPlayer == PV.Owner)
@@ -103,21 +108,21 @@ public class EXO : MonoBehaviourPunCallbacks, IDamageable
     {
         grounded = _grounded;
     }
-
+    */
     public void TakeDamage(float damage)
     {
         Debug.Log("I do");
-        
+        /*
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
             //Die();
         }
-        
-        //PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+        */
+        PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
     }
-
+    
     [PunRPC]
     void RPC_TakeDamage(float damage)
     {
@@ -129,13 +134,15 @@ public class EXO : MonoBehaviourPunCallbacks, IDamageable
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            Die();
+            Destroy(gameObject);
+            //Die();
 
         }
     }
-
+    /*
     void Die()
     {
         playerManager.Die();
     }
+    */
 }

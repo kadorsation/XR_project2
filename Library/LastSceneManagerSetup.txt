@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/dragon.unity
+- path: Assets/Scenes/MyScenes/StartScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
