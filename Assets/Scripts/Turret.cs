@@ -97,6 +97,9 @@ public class Turret : MonoBehaviour {
 			{
 				// Shoot();
 	            animator.SetBool("attack", true);
+				if (Vector3.Distance(target.position, transform.position) <= range) {
+					target.gameObject.GetComponent<IDamageable>()?.TakeDamage(20);
+				}
 				fireCountdown = 1f / fireRate;
 			}
 			else {

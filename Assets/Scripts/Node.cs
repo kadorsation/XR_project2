@@ -14,8 +14,9 @@ public class Node : MonoBehaviour {
 	[HideInInspector]
 	public bool isUpgraded = false;
 
-	private Renderer rend;
+	public Renderer rend;
 	private Color startColor;
+	public bool builded = false;
 
 	BuildManager buildManager;
 
@@ -49,8 +50,11 @@ public class Node : MonoBehaviour {
 		BuildTurret(buildManager.GetTurretToBuild());
 	}
 
-	void BuildTurret (TurretBlueprint blueprint)
+	public void BuildTurret (TurretBlueprint blueprint)
 	{
+		Debug.Log("hello"+builded);
+		if (builded) return;
+		Debug.Log("B");
 		if (PlayerStats.Money < blueprint.cost)
 		{
 			Debug.Log("Not enough money to build that!");
@@ -68,6 +72,7 @@ public class Node : MonoBehaviour {
 		Destroy(effect, 5f);
 
 		Debug.Log("Turret build!");
+		builded = true;
 	}
 
 	public void UpgradeTurret ()
@@ -108,16 +113,14 @@ public class Node : MonoBehaviour {
 
 	void OnMouseEnter ()
 	{
+
 		if (EventSystem.current.IsPointerOverGameObject())
 		{
-			Debug.Log("A");
 			return;
 		}
 
-
 		if (!buildManager.CanBuild)
 		{
-			Debug.Log("B");
 			return;
 		}
 

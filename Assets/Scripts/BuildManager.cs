@@ -17,7 +17,7 @@ public class BuildManager : MonoBehaviour {
 	public GameObject buildEffect;
 	public GameObject sellEffect;
 
-	private TurretBlueprint turretToBuild;
+	public TurretBlueprint turretToBuild;
 	private Node selectedNode;
 
 	public NodeUI nodeUI;
@@ -34,7 +34,7 @@ public class BuildManager : MonoBehaviour {
 		}
 
 		selectedNode = node;
-		turretToBuild = null;
+		// turretToBuild = null;
 
 		nodeUI.SetTarget(node);
 	}

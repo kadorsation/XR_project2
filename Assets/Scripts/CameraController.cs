@@ -9,6 +9,14 @@ public class CameraController : MonoBehaviour {
 	public float minY = 10f;
 	public float maxY = 80f;
 
+	BuildManager buildManager;
+
+	void Start () {
+
+		BuildManager buildManager;
+		buildManager = BuildManager.instance;
+	}
+
 	// Update is called once per frame
 	void Update () {
 
@@ -44,5 +52,33 @@ public class CameraController : MonoBehaviour {
 
 		transform.position = pos;
 
+		// findNearestNode();
+
+	}
+
+	void findNearestNode() {
+		GameObject[] floors = GameObject.FindGameObjectsWithTag("Node");
+		float shortestDistance = Mathf.Infinity;
+		Node nearestNode = null;
+		foreach (GameObject floor in floors)
+		{
+			float distanceToFloor = Vector3.Distance(transform.position, floor.transform.position);
+
+			Node node = floor.GetComponent<Node>();
+			node.rend.material.color = node.notEnoughMoneyColor;
+			if (distanceToFloor < shortestDistance)
+			{
+				shortestDistance = distanceToFloor;
+				nearestNode = node;
+			}
+		}
+		nearestNode.rend.material.color = nearestNode.hoverColor;
+		if (Input.GetMouseButtonDown(0) || Input.GetKey("l")) {
+			Debug.Log("A");
+			TurretBlueprint tb = buildManager.GetTurretToBuild();
+			Debug.Log(tb);
+			nearestNode.BuildTurret(tb);
+		}
+		// else {Debug.Log("no");}
 	}
 }

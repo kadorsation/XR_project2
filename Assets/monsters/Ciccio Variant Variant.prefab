@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1015048832}
   - component: {fileID: 1015048831}
   - component: {fileID: 1015048830}
+  - component: {fileID: 443001998479582120}
   m_Layer: 0
   m_Name: bullet1
   m_TagString: Untagged
@@ -88,11 +89,24 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015048828}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &443001998479582120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015048828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3433f481a6ee9b643889b960b6de036c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionVFX: {fileID: 0}
 --- !u!1 &1506581356
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +119,7 @@ GameObject:
   - component: {fileID: 1506581360}
   - component: {fileID: 1506581359}
   - component: {fileID: 1506581358}
+  - component: {fileID: 6802356652998258150}
   m_Layer: 0
   m_Name: bullet2
   m_TagString: Untagged
@@ -181,11 +196,24 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506581356}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6802356652998258150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506581356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3433f481a6ee9b643889b960b6de036c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionVFX: {fileID: 0}
 --- !u!114 &1970291889277063009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +240,19 @@ MonoBehaviour:
   turnSpeed: 100
   firePoint: {fileID: 8201613897775924347}
   bias: 0
+--- !u!114 &2129319668323777270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8201613897775503451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5d8156d86014574927f27a16200c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 40
 --- !u!1001 &5326746916484373835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,6 +349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ciccio Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052558499809690896, guid: 3113149bf9844a244b40b6559c8f8af1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1231048561, guid: 3113149bf9844a244b40b6559c8f8af1, type: 3}

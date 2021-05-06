@@ -34,13 +34,13 @@ public class PlayerManager : MonoBehaviour
         
         if(PhotonNetwork.IsMasterClient)
         {
-            controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player1"),
-                new Vector3(0f, 5f, 0f), Quaternion.identity, 0, new object[] { PV.ViewID });
+            controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"),
+                new Vector3(7.93f, -0.33f, 16.2f), Quaternion.identity, 0, new object[] { PV.ViewID });
         }
         else
         {
             controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "MyDragon"),
-                new Vector3(0f, 5f, 0f), Quaternion.identity, 0, new object[] { PV.ViewID });
+                new Vector3(11.96f, -0.99f, -9.26f), Quaternion.identity, 0, new object[] { PV.ViewID });
         }
     	
     }

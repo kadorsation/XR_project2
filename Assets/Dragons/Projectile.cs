@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public ParticleSystem explosionVFX;
+    // public ParticleSystem explosionVFX;
 
     void OnTriggerEnter(Collider other)
     {
     	Debug.Log(other);
+        if (transform.gameObject.tag == other.gameObject.tag) return;
 
         other.gameObject.GetComponent<IDamageable>()?.TakeDamage(20);
         Destroy(gameObject);
-    	
-    	ParticleSystem ps = Instantiate(explosionVFX, transform.position, transform.rotation) as ParticleSystem;
 
-    	ps.Play();
+        // if (explosionVFX) {
+        //     ParticleSystem ps = Instantiate(explosionVFX, transform.position, transform.rotation) as ParticleSystem;
+        //
+        //     ps.Play();
+        // }
 
     	//Invoke(DestroyPS, 2.0f);
     }
@@ -23,5 +26,5 @@ public class Projectile : MonoBehaviour
     private void DestroyPS()
     {
     	Destroy(gameObject);
-    } 
+    }
 }

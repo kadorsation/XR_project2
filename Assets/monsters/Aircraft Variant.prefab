@@ -88,7 +88,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432840913}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 768025735}
   - component: {fileID: 768025734}
   - component: {fileID: 768025733}
+  - component: {fileID: 2767186081261604726}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -182,12 +183,25 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768025731}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &2767186081261604726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768025731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3433f481a6ee9b643889b960b6de036c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionVFX: {fileID: 0}
 --- !u!1 &1270162685
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +290,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270162685}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -426,6 +440,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-7735411425617164132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3241680055501141760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5d8156d86014574927f27a16200c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 60
 --- !u!114 &8427850442510646660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,6 +489,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
       propertyPath: m_Name
       value: Aircraft Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
+      propertyPath: m_TagString
+      value: Turret
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
       propertyPath: m_RootOrder

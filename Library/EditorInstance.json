@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
 	"process_id" : 8674,
 	"version" : "2019.4.22f1",
 	"app_path" : "/Applications/Unity/Hub/Editor/2019.4.22f1/Unity.app",
 	"app_contents_path" : "/Applications/Unity/Hub/Editor/2019.4.22f1/Unity.app/Contents"
+=======
+	"process_id" : 26044,
+	"version" : "2019.4.20f1",
+	"app_path" : "C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Unity.exe",
+	"app_contents_path" : "C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data"
+>>>>>>> baa3aaf0dd36274d8c59c6cedbf168ac2daa4c80
 }
