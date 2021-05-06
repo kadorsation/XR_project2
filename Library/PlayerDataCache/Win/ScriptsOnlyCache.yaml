@@ -1,9 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Com.XRProject2.Team.GameManager
-    - Com.XRProject2.Team.Launcher
-    - Com.XRProject2.Team.PlayerNameInputField
     - DontDes
     - DragonCollider
     - DragonControl
@@ -14,16 +11,18 @@ ScriptsOnlyBuild:
     - PlayerController
     - PlayerManager
     - Projectile
-    - RoomManager
     - SingleShotGun
     - Spawner
     - VRAnimatorController
     - VRFootIK
     - VRRig
+    - VRTK.VRTK_DesktopCamera
     - VRTK.VRTK_Logger
+    - VRTK.VRTK_TransformFollow
     - exo_control
     - skill_cd
     - slider
+    - timer
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -68,18 +67,14 @@ ScriptsOnlyBuild:
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
-    Unity.XR.OpenVR.Editor.dll:
-    - Unity.XR.OpenVR.Editor.OpenVRSettingsEditor
     Unity.XR.OpenVR.dll:
     - Unity.XR.OpenVR.OpenVRLoader
     - Unity.XR.OpenVR.OpenVRSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -93,94 +88,14 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.InputField
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/MyScenes/BossRoom.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11326}
-    - Class: 114
-      Script: {instanceID: 11328}
-    - Class: 114
-      Script: {instanceID: 11330}
-    - Class: 114
-      Script: {instanceID: 11336}
-    - Class: 114
-      Script: {instanceID: 11764}
-    - Class: 114
-      Script: {instanceID: 11882}
-    - Class: 114
-      Script: {instanceID: 12772}
-    - Class: 114
-      Script: {instanceID: 14604}
-    - Class: 114
-      Script: {instanceID: 14608}
-    - Class: 114
-      Script: {instanceID: 15466}
-    - Class: 114
-      Script: {instanceID: 15620}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
-      Script: {instanceID: 0}
-    - Class: 205
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/MyScenes/StartScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -222,8 +137,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11326}
-    - Class: 114
       Script: {instanceID: 11328}
     - Class: 114
       Script: {instanceID: 11330}
@@ -234,13 +147,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11684}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 11870}
+      Script: {instanceID: 11766}
     - Class: 114
       Script: {instanceID: 11882}
     - Class: 114
@@ -249,6 +162,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11948}
     - Class: 114
       Script: {instanceID: 11996}
+    - Class: 114
+      Script: {instanceID: 12120}
     - Class: 114
       Script: {instanceID: 12266}
     - Class: 114
@@ -266,8 +181,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13138}
     - Class: 114
-      Script: {instanceID: 13278}
-    - Class: 114
       Script: {instanceID: 13418}
     - Class: 114
       Script: {instanceID: 13550}
@@ -275,6 +188,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13558}
     - Class: 114
       Script: {instanceID: 13564}
+    - Class: 114
+      Script: {instanceID: 13818}
     - Class: 114
       Script: {instanceID: 13838}
     - Class: 114
@@ -286,15 +201,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14012}
     - Class: 114
-      Script: {instanceID: 14112}
-    - Class: 114
       Script: {instanceID: 14136}
     - Class: 114
       Script: {instanceID: 14154}
     - Class: 114
-      Script: {instanceID: 14174}
-    - Class: 114
       Script: {instanceID: 14176}
+    - Class: 114
+      Script: {instanceID: 14234}
     - Class: 114
       Script: {instanceID: 14370}
     - Class: 114
@@ -302,9 +215,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14426}
     - Class: 114
+      Script: {instanceID: 14488}
+    - Class: 114
       Script: {instanceID: 14574}
     - Class: 114
       Script: {instanceID: 14606}
+    - Class: 114
+      Script: {instanceID: 14608}
     - Class: 114
       Script: {instanceID: 14612}
     - Class: 114
@@ -314,33 +231,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14630}
     - Class: 114
-      Script: {instanceID: 14744}
+      Script: {instanceID: 14676}
     - Class: 114
-      Script: {instanceID: 15010}
+      Script: {instanceID: 14746}
     - Class: 114
-      Script: {instanceID: 15018}
+      Script: {instanceID: 14878}
     - Class: 114
-      Script: {instanceID: 15106}
+      Script: {instanceID: 15014}
     - Class: 114
-      Script: {instanceID: 15132}
+      Script: {instanceID: 15110}
     - Class: 114
-      Script: {instanceID: 15158}
+      Script: {instanceID: 15136}
     - Class: 114
-      Script: {instanceID: 15182}
+      Script: {instanceID: 15162}
     - Class: 114
-      Script: {instanceID: 15272}
+      Script: {instanceID: 15186}
     - Class: 114
-      Script: {instanceID: 15464}
+      Script: {instanceID: 15276}
     - Class: 114
-      Script: {instanceID: 15620}
+      Script: {instanceID: 15468}
     - Class: 114
-      Script: {instanceID: 15682}
+      Script: {instanceID: 15470}
     - Class: 114
-      Script: {instanceID: 15728}
+      Script: {instanceID: 15624}
     - Class: 114
-      Script: {instanceID: 74822}
+      Script: {instanceID: 15686}
     - Class: 114
-      Script: {instanceID: 217820}
+      Script: {instanceID: 15732}
+    - Class: 114
+      Script: {instanceID: 34324}
+    - Class: 114
+      Script: {instanceID: 113090}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -363,6 +284,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 199
       Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -382,16 +305,16 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -3532,7 +3455,7 @@ ScriptsOnlyBuild:
     className: PlayerManager
   - hash:
       serializedVersion: 2
-      Hash: d0f015670169e7ee7b2156adfbd042b6
+      Hash: f7e0b7d4493df9e99378e6315c938b59
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: skill_cd
@@ -3590,6 +3513,12 @@ ScriptsOnlyBuild:
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.InteractionSystem
     className: ModalThrowable
+  - hash:
+      serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DragonHealth
   - hash:
       serializedVersion: 2
       Hash: 78b916f0bfd9c765acb82236ed9c1122
@@ -3752,6 +3681,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: VRTK.Examples
     className: VRTKExample_BezierPointerCustomStyles
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DontDes
   - hash:
       serializedVersion: 2
       Hash: ad50c94648779d3e321b448b68c1b6b2
@@ -4672,18 +4607,11 @@ ScriptsOnlyBuild:
     className: Hidden
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: bf4c0223f8b4ba77c267bab8a21ea27b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DragonHealth
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DontDes
+    className: timer
   platform: 5
   scenePathNames:
-  - Assets/Scenes/MyScenes/StartScene.unity
   - Assets/Scenes/MyScenes/BossRoom.unity
   playerPath: D:/xd/Project_2.exe

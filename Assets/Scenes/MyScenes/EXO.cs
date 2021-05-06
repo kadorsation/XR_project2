@@ -31,12 +31,13 @@ public class EXO : MonoBehaviour, IDamageable
     // Health
     const float maxHealth = 100f;
     float currentHealth = maxHealth;
-    // PlayerManager playerManager;
-
+    PlayerManager playerManager;
+    public Image slider_full;
+    public Text slider_number;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        // PV = GetComponent<PhotonView>();
+        //PV = GetComponent<PhotonView>();
         //playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
         DontDestroyOnLoad(gameObject);
     }
@@ -44,32 +45,33 @@ public class EXO : MonoBehaviour, IDamageable
     void Start()
     {
 
-        // if (PV.IsMine)
-        // {
-        //     //m_CameraRig = SteamVR_Render.Top().origin;
-        //     animator = GetComponent<Animator>();
-        //     EquipItem(0);
-        // }
-        // else
-        // {
-        //     //Destroy(GetComponentInChildren<Camera>().gameObject);
-        //     //Destroy(rb);
-        // }
+        //if (PV.IsMine)
+        //{
+            //m_CameraRig = SteamVR_Render.Top().origin;
+            animator = GetComponent<Animator>();
+            EquipItem(0);
+        //}
+        //else
+        //{
+        //Destroy(GetComponentInChildren<Camera>().gameObject);
+        //Destroy(rb);
+        //}
 
-       // animator = GetComponent<Animator>();
-       // EquipItem(0);
+        // animator = GetComponent<Animator>();
+        // EquipItem(0);
+        slider_number.text = maxHealth.ToString() + "/" + maxHealth.ToString();
     }
 
     void Update()
     {
-        // if (!PV.IsMine)
-        //     return;
+        //if (!PV.IsMine)
+        //    return;
 
-        // if (isFire.GetStateDown(SteamVR_Input_Sources.RightHand))
-        // {
-        //     animator.SetBool("isFire", true);
-        //     items[itemIndex].Use();
-        // }
+        if (isFire.GetStateDown(SteamVR_Input_Sources.RightHand))
+        {
+            animator.SetBool("isFire", true);
+            items[itemIndex].Use();
+        }
     }
 
     void EquipItem(int _index)
@@ -114,6 +116,26 @@ public class EXO : MonoBehaviour, IDamageable
         Debug.Log("I do");
 
         currentHealth -= damage;
+        slider_full.fillAmount = currentHealth / maxHealth;
+        slider_number.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            //Die();
+        }
+
+        //PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+    }
+    /*
+    [PunRPC]
+    void RPC_TakeDamage(float damage)
+    {
+        if (!PV.IsMine)
+            return;
+
+        Debug.Log("took damage: " + damage);
+
+        currentHealth -= damage;
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
@@ -122,23 +144,7 @@ public class EXO : MonoBehaviour, IDamageable
 
         // PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
     }
-
-    // [PunRPC]
-    // void RPC_TakeDamage(float damage)
-    // {
-    //     if (!PV.IsMine)
-    //         return;
-    //
-    //     Debug.Log("took damage: " + damage);
-    //
-    //     currentHealth -= damage;
-    //     if (currentHealth <= 0)
-    //     {
-    //         Destroy(gameObject);
-    //         //Die();
-    //
-    //     }
-    // }
+    */
     /*
     void Die()
     {
