@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 6436213492671743062}
   - component: {fileID: 288943069}
   - component: {fileID: 288943070}
-  - component: {fileID: 288943068}
+  - component: {fileID: 6519049207998943088}
   m_Layer: 0
   m_Name: SphereRobot Variant
   m_TagString: Untagged
@@ -255,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 6436213492681274920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 156.38855, y: 99.02147, z: 273.06}
-  m_LocalScale: {x: 30, y: 30, z: 30}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 6436213492680780792}
   - {fileID: 6436213492680780774}
@@ -331,7 +331,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &288943068
+--- !u!114 &6519049207998943088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,9 +340,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6436213492681274920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e79ae8c898257d43885159cd25cc2e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 89e58e17ccca86642a73d908b186c94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 5
+  bulletPrefab: {fileID: 0}
+  fireRate: 1
+  useLaser: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
+  enemyTag: Player
+  partToRotate: {fileID: 6436213492680780744}
+  turnSpeed: 100
+  firePoint: {fileID: 6436213492680780744}
+  bias: 0
 --- !u!1 &6436213492681274922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,7 +4349,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 269637ade25ef4a8c82adec0362f70cb, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

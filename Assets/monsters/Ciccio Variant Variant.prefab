@@ -186,6 +186,32 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1970291889277063009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8201613897775503451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e58e17ccca86642a73d908b186c94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  bulletPrefab: {fileID: 0}
+  fireRate: 1
+  useLaser: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
+  enemyTag: Player
+  partToRotate: {fileID: 8201613897775924347}
+  turnSpeed: 100
+  firePoint: {fileID: 8201613897775924347}
+  bias: 0
 --- !u!1001 &5326746916484373835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -215,18 +241,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.822372
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.9850464
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,
         type: 3}
@@ -266,10 +307,17 @@ PrefabInstance:
     - target: {fileID: 4052558499809690896, guid: 3113149bf9844a244b40b6559c8f8af1,
         type: 3}
       propertyPath: m_Name
-      value: Ciccio Variant
+      value: Ciccio Variant Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1231048561, guid: 3113149bf9844a244b40b6559c8f8af1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3113149bf9844a244b40b6559c8f8af1, type: 3}
+--- !u!1 &8201613897775503451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4052558499809690896, guid: 3113149bf9844a244b40b6559c8f8af1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5326746916484373835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8201613897775924347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4052558499809466672, guid: 3113149bf9844a244b40b6559c8f8af1,

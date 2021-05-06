@@ -1,5 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2411705077193436382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106870864630560731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217be8ffc06a7cc47ae5ab39c759b026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.9109577, g: 0.9150943, b: 0.22877358, a: 0}
+  notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}
+  turretBlueprint:
+    prefab: {fileID: 0}
+    cost: 0
+    upgradedPrefab: {fileID: 0}
+    upgradeCost: 0
+  isUpgraded: 0
 --- !u!1 &902777134299541724
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +255,7 @@ GameObject:
   - component: {fileID: 634779735488794365}
   - component: {fileID: 4072212575761431586}
   - component: {fileID: 1064018238972596341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,6 +467,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c3e02f971bdebe4bbefe6c79fbc760a, type: 3}
+--- !u!1 &106870864630560731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5550724181216084848, guid: 9c3e02f971bdebe4bbefe6c79fbc760a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5508901009678333099}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &106870864630560728 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5550724181216084851, guid: 9c3e02f971bdebe4bbefe6c79fbc760a,
